@@ -11,6 +11,7 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Jost",  sans-serif;
@@ -115,6 +116,9 @@ h6 {
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
+}
+.stretched-link{
+  margin-top: 4800px;
 }
 
 .php-email-form .loading:before {
@@ -1044,6 +1048,7 @@ section,
   margin-bottom: 20px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  
 }
 
 .why-us .faq-container .faq-item:last-child {
@@ -1108,6 +1113,9 @@ section,
 
 .why-us .faq-container .faq-active h3 {
   color: var(--accent-color);
+}
+.container1{
+  margin-top: 50px;
 }
 
 .why-us .faq-container .faq-active .faq-content {
@@ -1200,6 +1208,7 @@ section,
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   height: 100%;
+  
 }
 
 .services .service-item .icon {
@@ -2055,11 +2064,11 @@ section,
   align-items: center;
 }
 
-.service-details ul i {
+/* .service-details ul i {
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
-}
+} */
 
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -2067,3 +2076,113 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* Products Page Custom Styles */
+
+/* General Styles */
+.products-page {
+  background-color: #f8f9fa; /* Light background for the page */
+}
+
+/* Page Title */
+.page-title {
+  background: #007bff; /* Blue background */
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.page-title h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.page-title .breadcrumbs {
+  margin-bottom: 20px;
+}
+
+.page-title .breadcrumbs a {
+  color: #ffd700; /* Gold color for breadcrumb links */
+}
+
+.page-title .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Products Section */
+.products .product-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.products .product-item:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.products .product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.products .product-item h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.products .product-item p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.products .product-item .product-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #007bff; /* Highlight price with blue */
+  margin-bottom: 15px;
+}
+
+.products .product-item .btn {
+  background: #007bff;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+.products .product-item .btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-title h1 {
+    font-size: 2rem;
+  }
+
+  .products .product-item {
+    padding: 15px;
+  }
+
+  .products .product-item h4 {
+    font-size: 1.25rem;
+  }
+
+  .products .product-item .product-price {
+    font-size: 1.1rem;
+  }
+}
+
+
