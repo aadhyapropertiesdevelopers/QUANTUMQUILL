@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - QuantumQuill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>QuantumQuill</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="/products">Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/products/product1">Product 1</a></li>
+                        <li><a href="/products/product2">Product 2</a></li>
+                        <li><a href="/products/product3">Product 3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/services" class="active">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/services/service1">Service 1</a></li>
+                        <li><a href="/services/service2">Service 2</a></li>
+                        <li><a href="/services/service3">Service 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            {% for service in services %}
+            <div class="service-card" onclick="openPopup('{{ service.name }}', '{{ service.description }}')">
+                <h3>{{ service.name }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3 id="popup-title" onclick="revealContent()"></h3>
+            <p id="popup-description" class="hidden"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 QuantumQuill | All rights reserved</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
